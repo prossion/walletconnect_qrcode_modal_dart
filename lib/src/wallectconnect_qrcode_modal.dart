@@ -138,6 +138,9 @@ class WalletConnectQrCodeModal {
               isDismissed = true;
               if (!sessionCreated && !isError) {
                 // dialog dismissed without connecting, cancel session creation
+                Future.delayed(const Duration(milliseconds: 1000), () {
+                  Navigator.of(context).pop();
+                });
                 cancelableCompleter.operation.cancel();
                 completer.complete(null);
               }
