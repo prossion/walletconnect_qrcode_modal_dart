@@ -162,6 +162,9 @@ class WalletConnectQrCodeModal {
       }
       if (!completer.isCompleted) {
         completer.complete(session);
+        Future.delayed(const Duration(milliseconds: 1000), () {
+          Navigator.of(context).pop();
+        });
       }
     }).catchError((error) {
       debugPrint(error.message);
