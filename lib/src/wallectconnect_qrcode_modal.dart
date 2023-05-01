@@ -136,7 +136,6 @@ class WalletConnectQrCodeModal {
               isDismissed = true;
               if (!sessionCreated && !isError) {
                 // dialog dismissed without connecting, cancel session creation
-                Navigator.of(context).pop();
                 cancelableCompleter.operation.cancel();
                 completer.complete(null);
               }
@@ -158,7 +157,6 @@ class WalletConnectQrCodeModal {
       }
       if (!completer.isCompleted) {
         completer.complete(session);
-        Navigator.of(context).pop();
       }
     }).catchError((error) {
       debugPrint(error.message);
