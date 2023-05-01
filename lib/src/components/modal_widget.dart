@@ -271,9 +271,9 @@ class _ModalContent extends StatelessWidget {
                 if (onOpenWalletFailure != null) {
                   onOpenWalletFailure!.call(wallet);
                 } else {
-                  if (context.mounted) {
-                    showLinkError(context, wallet);
-                  }
+                  // if (context.mounted) {
+                  showLinkError(context, wallet);
+                  // }
                 }
               }
             },
@@ -292,9 +292,9 @@ class _ModalContent extends StatelessWidget {
                 if (onOpenWalletFailure != null) {
                   onOpenWalletFailure!.call(wallet);
                 } else {
-                  if (context.mounted) {
-                    showLinkError(context, wallet);
-                  }
+                  // if (context.mounted) {
+                  showLinkError(context, wallet);
+                  // }
                 }
               }
             },
