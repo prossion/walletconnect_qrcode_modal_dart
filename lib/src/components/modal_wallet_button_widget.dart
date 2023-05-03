@@ -34,9 +34,7 @@ class ModalWalletButtonWidget extends StatelessWidget {
         onPressed: () {
           launchUrl(Uri.parse(uri));
 
-          Future.delayed(const Duration(milliseconds: 3000), () {
-            Navigator.of(context).pop();
-          });
+          closeInAppWebView();
         },
         child: Text(
           text,
