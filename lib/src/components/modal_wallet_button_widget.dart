@@ -31,7 +31,11 @@ class ModalWalletButtonWidget extends StatelessWidget {
     return Center(
       child: ElevatedButton(
         style: buttonStyle,
-        onPressed: () => launchUrl(Uri.parse(uri)),
+        onPressed: () {
+          launchUrl(Uri.parse(uri));
+
+          Navigator.of(context).pop();
+        },
         child: Text(
           text,
           style: textStyle,
