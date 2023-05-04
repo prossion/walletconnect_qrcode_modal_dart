@@ -330,7 +330,7 @@ class _ModalContent extends StatelessWidget {
         if (platformOverrides?.ios != null) {
           type = platformOverrides!.ios!;
         } else {
-          type = ModalWalletType.listMobile;
+          type = ModalWalletType.button;
         }
       } else if (Utils.isAndroid) {
         if (platformOverrides?.android != null) {
